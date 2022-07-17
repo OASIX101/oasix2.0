@@ -51,25 +51,41 @@
 
 
 
-map_dict = {'name': 'anthony',
-            'd': 'dance'
-}
+# map_dict = {'name': 'anthony',
+#             'd': 'dance'
+# }
 
-list1 = ['1','3','6','7','9']
-list2 = [1,4,6,7,8]
+# list1 = ['1','3','6','7','9']
+# list2 = [1,4,6,7,8]
 
-zipped = dict(zip(list1,list2))
-map_dict['list'] = zipped
-print(map_dict)
+# zipped = dict(zip(list1,list2))
+# map_dict['list'] = zipped
+# print(map_dict)
 
 
-list= {'v1': 's001',
-       'v2': 's002',
-       'v3': 's004',
-       'v4': 's005',
-}
+# list= {'v1': 's001',
+#        'v2': 's002',
+#        'v3': 's004',
+#        'v4': 's005',
+# }
 
 # value = list.values()
 # print(set(value))
 
 #####   loops   #####
+
+
+# while True:
+#     data = int(input('-> '))
+#     print(data)
+#     if data == 5:
+#         break
+
+# a = 100
+# count = 0
+# while True:
+#     print(a)
+#     a-=1
+#     count+=1
+#     if count == 3:
+#         break
