@@ -9,6 +9,7 @@ name = input('insert name -> ').upper()
 T.sleep(0.5)
 print(f'WELCOME MASTER {name}')
 
+
 words  = ('true','boolean','string','integer','superhuman','elephant','casino','checkers','ronaldo')
 
 score = 0
@@ -47,6 +48,8 @@ while continue1 == y:
         continue1 = input('if you wish to continue insert "yes" or insert anything to stop: ').lower()
         if continue1 == y:
             limit = 5
+            score = 0
+            play = 0
             continue
         else:
             print('-----------------------------')

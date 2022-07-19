@@ -10,7 +10,7 @@
 # # d['name']= 'olowu'
 # # print(d['name'])
 
-# # print(max(d['scores']))
+# print(max(d['scores']))
 
 # # print(sum(d['scores'])/len(d['scores']))
 
