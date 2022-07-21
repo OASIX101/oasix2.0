@@ -32,3 +32,9 @@ print(f'the third most frequent number is {mode[2]}')
 
 # i think there are other ways to do it using lambda, mapping and other functions which
 #  which could make the code simple and understandable. 
+
+####     CORRECTION      ####
+
+def most_freq(numbers: list,k:int):
+    counter = counter(numbers)
+    

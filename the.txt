@@ -1,0 +1,2 @@
+round(number, the round up index) # this rounds up a float number
+try:-except: it is used to check errors manually(finally:it run even if try and except dont work)
