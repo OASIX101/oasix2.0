@@ -7,8 +7,11 @@
 #     ('tuple'): 'this is a tuple'
 # }
 
-# # d['name']= 'olowu'
-# # print(d['name'])
+# d.update({'tony':{'you':'3',
+#                    'no': 'no'}})
+# print(d['tony']['you'])
+# d['name']= 'olowu'
+# print(d['name'])
 
 # print(max(d['scores']))
 
@@ -89,3 +92,10 @@
 #     count+=1
 #     if count == 3:
 #         break
+from random import randint
+
+def generate_pin():
+    numee = print(str(randint(0,9999)).rjust(4,"0"))
+    return numee
+
+generate_pin()

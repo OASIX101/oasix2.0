@@ -87,7 +87,7 @@ while trials > 0:
         rematch = input("> ").lower() 
         
         if rematch == "y":
-            "Print welcome back"
+            print('welcome back')
             trials = 3
             score = 0
 
@@ -98,3 +98,4 @@ while trials > 0:
 
 with open("database.txt", "w") as file:
     file.write(str(data))
+ 

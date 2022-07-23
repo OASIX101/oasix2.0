@@ -1,0 +1,7 @@
+the mean is 4.0
+the median is 4
+the variance is 4.0
+the standard deviation of the numbers is 2.0
+the mode is 15
+results added
+
