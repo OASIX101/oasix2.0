@@ -9,7 +9,6 @@ with open('bank database.txt','r') as file:
     data = eval(file.read())
 
 while True:
-    trial = 5
     request = input('Do you have an account here?. Enter "yes" if you have or "no" if you dont\n>>> ').lower()
     if request == 'yes':
         acct_num = str(input('Enter your account number\n>>>'))
