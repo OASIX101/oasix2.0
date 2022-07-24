@@ -17,14 +17,14 @@ while True:
             print('welcome', data[acct_num]['first_name'], data[acct_num]['last_name'])
             login_pin = input('Enter your login pin.\n>>>')
             if login_pin == data[acct_num]['login_pin']:
-                option = int(input('What would you like to do? insert 1,2,3,4,5,6 ->\n1. check account balance\n2. Transfers\n3. Deposit\n4. Withdraw\n5. change login pin>\n6. change transaction pin\n>> '))
+                option = int(input('What would you like to do? insert 1,2,3,4,5,6 ->\n1. check account balance\n2. Transfers\n3. Deposit\n4. Withdraw\n5. change login pin\n6. change transaction pin\n>> '))
                 options =  [1,2,3,4,5,6]
                 
 
                 if option in options:
                     pin = data[acct_num]['transaction_pin']
                     if option == 1:
-                        en = input('Enter pin\n>>>')
+                        en = input('Enter transaction pin\n>>>')
                         if en == pin:
                             print('your balance is $',data[acct_num]['balance'])
                         else:
@@ -34,7 +34,7 @@ while True:
                         person = input('Enter the user account number.\n>>>')
                         if person in data:
                             amount = int(input('Enter amount.\n$'))
-                            en = input('Enter pin\n>>>')
+                            en = input('Enter transaction pin\n>>>')
                             if en == pin:
                                 data[person]['balance']+=amount
                                 data[acct_num]['balance']-=amount
@@ -45,7 +45,7 @@ while True:
                             print('user invalid')
                     
                     elif option == 3:
-                        en = input('Enter pin\n>>>')
+                        en = input('Enter transaction pin\n>>>')
                         if en == pin:
                             dep = int(input('Enter amount\n>>>'))
                             data[acct_num]['balance']+=dep
@@ -54,7 +54,7 @@ while True:
                             print('incorrect pin')
 
                     elif option == 4:
-                        en = input('Enter pin\n>>>')
+                        en = input('Enter transaction pin\n>>>')
                         if en == pin:
                             withdrawal = int(input('Enter amount\n>>>'))
                             draw = data[acct_num]['balance']
@@ -103,7 +103,7 @@ while True:
                 print('incorrect pin')   
             
         else:
-            print('user not found')        
+            print('USER NOT FOUND')        
     
     elif request == 'no':
         acct = num
