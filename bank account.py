@@ -1,4 +1,3 @@
-from cmath import log
 from random import randint
 print('welcome to oasix bank')
 
