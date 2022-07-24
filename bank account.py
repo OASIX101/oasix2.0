@@ -1,3 +1,4 @@
+from cmath import log
 from random import randint
 print('welcome to oasix bank')
 
@@ -9,6 +10,7 @@ with open('bank database.txt','r') as file:
     data = eval(file.read())
 
 while True:
+    trial = 5
     request = input('Do you have an account here?. Enter "yes" if you have or "no" if you dont\n>>> ').lower()
     if request == 'yes':
         acct_num = str(input('Enter your account number\n>>>'))
@@ -16,8 +18,8 @@ while True:
             print('welcome', data[acct_num]['first_name'], data[acct_num]['last_name'])
             login_pin = input('Enter your login pin.\n>>>')
             if login_pin == data[acct_num]['login_pin']:
-                option = int(input('What would you like to do? insert 1,2,3,4 ->\n1. check account balance\n2. Transfers\n3. Deposit\n4. Withdraw\n>>> '))
-                options =  [1,2,3,4]
+                option = int(input('What would you like to do? insert 1,2,3,4,5,6 ->\n1. check account balance\n2. Transfers\n3. Deposit\n4. Withdraw\n5. change login pin>\n6. change transaction pin\n>> '))
+                options =  [1,2,3,4,5,6]
                 
 
                 if option in options:
@@ -25,7 +27,7 @@ while True:
                     if option == 1:
                         en = input('Enter pin\n>>>')
                         if en == pin:
-                            print('$',data[acct_num]['balance'])
+                            print('your balance is $',data[acct_num]['balance'])
                         else:
                             print('incorrect pin')
 
@@ -61,10 +63,38 @@ while True:
                                 print(f'insufficient balance\n balance is {draw}')
                             else:
                                 data[acct_num]['balance']-=withdrawal
-                                print(f'Your new balance is ${draw}')
-                            
+                                print(f'Your new balance is $', data[acct_num]['balance'])
                         else:
                             print('incorrect pin')
+
+                    elif option == 5:
+                        login_pin1 = data[acct_num]['login_pin']
+                        en1 = input('Enter previous login pin\n>>>')
+                        if en1 == login_pin1:
+                            change = input('Enter new pin\n>>>')
+                            change1 = input('Enter new pin again for clearity\n>>>')
+                            if change1 == change:
+                                data[acct_num]['login_pin'] = change1
+                                print(f'pin successfully changed to {change1}\nDo not share it')
+                            else:
+                                print('inputed pin do not match')
+                        else:
+                            print('invalid pin')
+
+                    elif option == 6:
+                        trans_pin2 = data[acct_num]['transaction_pin']
+                        en2 = input('Enter previous transaction pin\n>>>')
+                        if en2 == trans_pin2:
+                            change3 = input('Enter new pin\n>>>')
+                            change4 = input('Enter new pin again for clearity\n>>>')
+                            if change3 == change4:
+                                data[acct_num]['transaction_pin'] = change4 
+                                print(f'pin successfully changed to {change4}\nDo not share it')
+                            else:
+                                print('inputed pin do not match')
+                        else:
+                            print('invalid pin')
+
                 else:
                     print('invalid input')
 
@@ -91,9 +121,9 @@ while True:
             data[acct]['first_name'] = info
             info2 = input('Enter your last name\n>>>')
             data[acct]['last_name'] = info2
-            info1 = input('Set transaction pin\n>>>')
+            info1 = input('Set transaction pin. 4 digits not to be shown to anyone\n>>>')
             data[acct]['transaction_pin'] = info1
-            info3 = input('Set login pin\n>>>')
+            info3 = input('Set login pin. 4 digits not to be shown to anyone\n>>>')
             data[acct]['login_pin'] = info3
 
             print(f'Account sucessfully created.\nWelcome to oasix bank {info} {info2}')
@@ -113,4 +143,12 @@ while True:
     else:
         print('Have a great day beloved customer!!!')
         break
+
+
+#####   check account numbers in the database    ####
+print('-------------------------------------------------------------')
+print('present accounts in the bank')
+for i in data.keys():
+    print(i, data[i]['first_name'],data[i]['last_name'])
+print('--------------------------------------------------------------')
 
