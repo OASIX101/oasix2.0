@@ -1,1 +1,1 @@
-{'0235825779': {'first_name': 'ororo', 'last_name': 'plls', 'login_pin': '', 'transaction_pin': '2334', 'balance': 5000}}
+{'0235825779': {'first_name': 'ororo', 'last_name': 'plls', 'login_pin': '0000', 'transaction_pin': '1234', 'balance': 5000}}
