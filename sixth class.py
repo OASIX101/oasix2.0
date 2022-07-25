@@ -92,10 +92,13 @@
 #     count+=1
 #     if count == 3:
 #         break
-from random import randint
+# from random import randint
 
-def generate_pin():
-    numee = print(str(randint(0,9999)).rjust(4,"0"))
-    return numee
+# def generate_pin():
+#     numee = print(str(randint(0,9999)).rjust(4,"0"))
+#     return numee
 
-generate_pin()
+# generate_pin()
+
+a = '1234'
+print(len(a))

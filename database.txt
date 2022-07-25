@@ -1,1 +1,0 @@
-{'0126053537': {'first_name': 'rii', 'last_name': 'rr', 'login_pin': '4444', 'transaction_pin': '9289', 'balance': 1000}}

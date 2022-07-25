@@ -9,7 +9,6 @@ with open('bank database.txt','r') as file:
     data = eval(file.read())
 
 while True:
-    trial = 5
     request = input('Do you have an account here?. Enter "yes" if you have or "no" if you dont\n>>> ').lower()
     if request == 'yes':
         acct_num = str(input('Enter your account number\n>>>'))
@@ -120,12 +119,26 @@ while True:
             data[acct]['first_name'] = info
             info2 = input('Enter your last name\n>>>')
             data[acct]['last_name'] = info2
-            info1 = input('Set transaction pin. 4 digits not to be shown to anyone\n>>>')
-            data[acct]['transaction_pin'] = info1
-            info3 = input('Set login pin. 4 digits not to be shown to anyone\n>>>')
-            data[acct]['login_pin'] = info3
+            while True:
+                info1 = input('Set transaction pin. 4 digits not to be shown to anyone\n>>>')
+                if len(info1) == 4:
+                    data[acct]['transaction_pin'] = info1
+                    break
+                elif len(info1) > 4:
+                    print('inserted pin greated than 4')
+                elif len(info1) < 4:
+                    print('inserted pin less than 4')
+            while True:
+                info3 = input('Set login pin. 4 digits not to be shown to anyone\n>>>')
+                if len(info3) == 4:
+                    data[acct]['login_pin'] = info3
+                    break
+                elif len(info3) > 4:
+                    print('inserted pin greated than 4 digits')
+                elif len(info3) < 4:
+                    print('inserted pin less than 4 digits')
 
-            print(f'Account sucessfully created.\nWelcome to oasix bank {info} {info2}')
+            print(f'Account sucessfully created.\nWelcome to oasix bank {info} {info2}\nyour number is {acct} ')
             with open('bank database.txt', 'w') as file:
                 file.write(str(data))
         
@@ -133,10 +146,10 @@ while True:
         print('invalid input')
     
 
-    continue1 = input('Do you wish to continue.\nInsert "c" to continue or "s" to stop\n>>>').lower()
-    if continue1 == 'c':
+    restart = input('Do you wish to continue.\nInsert "c" to continue or "s" to stop\n>>>').lower()
+    if restart == 'c':
         continue
-    elif continue1 == 's':
+    elif restart == 's':
         print('Have a great day our dear customer!!!')
         break
     else:
@@ -144,10 +157,5 @@ while True:
         break
 
 
-#####   check account numbers in the database    ####
-print('-------------------------------------------------------------')
-print('present accounts in the bank')
-for i in data.keys():
-    print(i, data[i]['first_name'],data[i]['last_name'])
-print('--------------------------------------------------------------')
+
 

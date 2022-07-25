@@ -1,1 +1,1 @@
-{'0558485847': {'first_name': 'anth', 'last_name': 'oasix', 'login_pin': '3333', 'transaction_pin': '1111', 'balance': 11000}, '0052726807': {'first_name': 'the', 'last_name': 'man', 'login_pin': '1234', 'transaction_pin': '6789', 'balance': 4000}}
+{'0235825779': {'first_name': 'ororo', 'last_name': 'plls', 'login_pin': '', 'transaction_pin': '2334', 'balance': 5000}}
