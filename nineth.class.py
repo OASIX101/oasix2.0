@@ -38,3 +38,4 @@ print(dog1.run())
 # print(Dog.num_of_limb)
 
 print(dog1 + dog2)
+

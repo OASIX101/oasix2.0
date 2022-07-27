@@ -6,33 +6,29 @@ with open('bank copy.txt', 'r') as file:
 
 def create_acct():
     fname = input('Enter your first name(surname)\n>>>').capitalize()
-    print('')
     data[num1]['first_name'] = fname
     lname = input('Enter your last name\n>>>').lower()
-    print('')
     data[num1]['last_name'] = lname
     print(f'welcome {fname} {lname} ')
     while True:
         info3 = input('Set login pin. 4 digits not to be shown to anyone\n>>>')
         if len(info3) == 4:
             data[num1]['login_pin'] = info3
-            print('')
             break
         elif len(info3) > 4:
-            print('inserted pin greated than 4 digits\n')
+            print('inserted pin greated than 4 digits')
         elif len(info3) < 4:
-            print('inserted pin less than 4 digits\n')
+            print('inserted pin less than 4 digits')
 
     while True:
         info1 = input('Set transaction pin. 4 digits not to be shown to anyone\n>>>')
         if len(info1) == 4:
             data[num1]['transaction_pin'] = info1
-            print('')
             break
         elif len(info1) > 4:
-            print('inserted pin greated than 4\n')
+            print('inserted pin greated than 4')
         elif len(info1) < 4:
-            print('inserted pin less than 4\n')
+            print('inserted pin less than 4')
 
     print(f'Your account number is {num1}\nkeep for future reference')
     print(f'Thank you for choosing oasix bank {fname} {lname}')
@@ -43,31 +39,25 @@ def transaction():
     if choice in choices:
         if choice == 1:
             balance_check()
-            print('')
 
         elif choice == 2:
             deposit()
-            print('')
 
         elif choice == 3:
             transfer()
-            print('')
 
         elif choice == 4:
             withdraw()
-            print('')
 
         elif choice == 5:
             pinchange_login()
-            print('')
 
         elif choice == 6:
-            pinchange_trans()
-            print('')     
+            pinchange_trans()     
         else:
-            print('invalid input\n')
+            print('invalid input')
     else:
-        print('input option not in the options\n')
+        print('input option not in the options')
 
 def balance_check():
     en = input('Enter transaction pin\n>>>')
@@ -166,7 +156,6 @@ def verify_acct():
 
 while True:
     option = int(input('what would like to do\n1. create an account\n2. Log in to an existing account\n3. verify whether your account exists\n>>>'))
-    print('')
     options = [1,2,3]
     num = '0' + str(randint(0, 999999999)).rjust(9, '0')
 
@@ -182,7 +171,6 @@ while True:
                                             })
 
                 create_acct()
-                print('')
                 with open('bank copy.txt','w') as file:
                     file.write(str(data))
     
@@ -194,9 +182,9 @@ while True:
                     print('welcome back', data[num2]['first_name'], data[num2]['last_name'])
                     transaction()
                 else:
-                    print('login pin not correct\n')
+                    print('login pin not correct')
             else:
-                print('USER NOT FOUND\n')
+                print('USER NOT FOUND')
             
             with open('bank copy.txt', 'w') as file:
                 file.write(str(data))
@@ -219,4 +207,5 @@ while True:
         print('Have a great day\nWe hope to see you again')
         break
 
-
+    
+                

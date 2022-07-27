@@ -1,0 +1,1 @@
+{'0430078346': {'first_name': 'Anthony', 'last_name': 'olowu', 'login_pin': '1111', 'transaction_pin': '1111', 'balance': 5000}, '0556711013': {'first_name': 'Anthion', 'last_name': 'olow', 'login_pin': '1111', 'transaction_pin': '1111', 'balance': 5000}, '0560623171': {'first_name': 'Wwkwk', 'last_name': 'kdskdo', 'login_pin': '1111', 'transaction_pin': '1233', 'balance': 5000}}
