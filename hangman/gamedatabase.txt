@@ -1,0 +1,1 @@
+{'Anthony': 50, 'Mama': 100, 'Susan': 40, 'An': 20, 'Anth': 125, 'Ran': 20, 'Tony': 50, 'Gloria': 15, 'Nnn': 35, 'Nnn#': 35, 'Emma': 25, '\x16': 40, 'Ann': 90}

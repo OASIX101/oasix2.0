@@ -1,6 +1,5 @@
 from random import randint
 print('welcome to oasix bank')
-
 data = {}
 
 

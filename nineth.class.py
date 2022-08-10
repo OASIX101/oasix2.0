@@ -1,7 +1,3 @@
-from codecs import BufferedIncrementalDecoder
-from distutils.log import error
-
-
 class Dog():
 
     num_of_limb = 4
@@ -10,10 +6,9 @@ class Dog():
         self.breed = breed
         self.color = color
         self.weight = weight
-        pass
 
     def __str__(self):
-        return (f'the dog is {self.breed}')# to call the dog1 variable cos a variable cannot hold an object  
+        return (f'the dog is a {self.breed}')# to call the dog1 variable cos a variable cannot hold an object  
     
     def __add__(self,other):
         
@@ -28,14 +23,12 @@ class Dog():
 
 dog1 = Dog('bull dog','black and white',25)
 dog2 = Dog('bull dog','white',55)
-print(dog1.run())
-# print(dog1)
-# print(dog1.breed, dog1.color)
-
-
-
-
-# print(Dog.num_of_limb)
-
+dog3 = Dog('german sheperd', 'grey', 100)
+# print(dog1.run())
+print(dog3)
+print(dog1.breed, dog1.color)
+print(Dog.num_of_limb)
 print(dog1 + dog2)
+
+
 

@@ -10,7 +10,6 @@
 #     print(i)
 #     i+=1
 
-
 # for i in range(1, 6):
 #     for j in range(1, i + 1):
 #         print(j, end = '-')
@@ -31,7 +30,7 @@
 
 # print(f'sum is: {s}')
 
-# n= int(input('- '))
+# n= int(input(' '))
 # x = range(n+1)
 # s = sum(x)
 
@@ -54,9 +53,37 @@
 #     elif i % 5 == 0:
 #         print(i)
 
-n = 75869
-c=0
-while n!= 0:
-    n = n // 10
-    c= c + 1
-print(c)
+# n = 75869
+# c=0
+# while n!= 0:
+#     n //= 10
+#     c += 1
+# print(c)
+
+# class Person:
+#     def __init__(self, name, sex, profession):
+#         # data members (instance variables)
+#         self.name = name
+#         self.sex = sex
+#         self.profession = profession
+
+#     # Behavior (instance methods)
+#     def show(self):
+#         print('Name:', self.name, 'Sex:', self.sex, 'Profession:', self.profession)
+
+#     # Behavior (instance methods)
+#     def work(self):
+#         print(self.name, 'is working as a', self.profession)
+
+# person1 = Person('anthony','male','engineer')
+# person1.show()
+# person1.work()
+
+def find_run(numbers):
+    run = numbers[0]
+    for i in numbers:
+        if i > run:
+            run = i
+
+    return run
+

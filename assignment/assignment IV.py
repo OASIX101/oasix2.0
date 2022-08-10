@@ -1,7 +1,5 @@
-
 import random as rd
 import time as T
-from urllib.parse import uses_relative
 print('WELCOME TO MY GAME !')
 T.sleep(0.5)
 print('How to play: guess the randomly obtained word correctly and get 5 points')

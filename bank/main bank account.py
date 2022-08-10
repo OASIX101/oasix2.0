@@ -78,21 +78,27 @@ def balance_check():
         print('incorrect pin')
 
 def transfer():
+    '''this function transfers money from one user to another user'''
     pin = data[num2]['transaction_pin']
     person = input('Enter the user account number.\n>>>')
     if person in data:
         amount = int(input('Enter amount.\n$'))
         en = input('Enter transaction pin\n>>>')
         if en == pin:
-            data[person]['balance']+=amount
-            data[num2]['balance']-=amount
-            print(f'${amount} has be transferred to {person}', data[person]['first_name'], data[person]['last_name'])
+            if amount <= data[num2]['balance']: 
+                data[person]['balance']+=amount
+                data[num2]['balance']-=amount
+                print(f'${amount} has be transferred to {person}', data[person]['first_name'], data[person]['last_name'])
+
+            else:
+                print('insufficient balance')
         else:
             print('incorrect pin')
     else:
         print('user not found')
 
 def deposit():
+    '''this function deposits cash to the user balance'''
     pin = data[num2]['transaction_pin']
     en = input('Enter transaction pin\n>>>')
     if en == pin:
